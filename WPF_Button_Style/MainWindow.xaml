@@ -21,19 +21,58 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <StackPanel>
+        <StackPanel Grid.Column="0" Margin="5 0 5 0">
             <TextBlock Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Flat Button"/>
-            <Button Style="{StaticResource DarkTheme}" Content="Dark Button"
+            <Button Style="{StaticResource DarkTheme}"
+                    Margin="0 5 0 5"
+                    Content="Dark Button"
                     Padding="5,10"></Button>
-            <Button Style="{StaticResource LightTheme}" Content="Light Button"
+            <Button Style="{StaticResource LightTheme}" 
+                    Margin="0 5 0 5"
+                    Content="Light Button"
                     Padding="5,10"></Button>
-            <Button Style="{StaticResource SuccessTheme}" Content="Success Button"
+            <Button Style="{StaticResource SuccessTheme}" 
+                    Margin="0 5 0 5"
+                    Content="Success Button"
                     Padding="5,10"></Button>
-            <Button Style="{StaticResource InfoTheme}" Content="Info Button"
+            <Button Style="{StaticResource InfoTheme}" 
+                    Margin="0 5 0 5"
+                    Content="Info Button"
                     Padding="5,10"></Button>
-            <Button Style="{StaticResource DangerTheme}" Content="Danger Button"
+            <Button Style="{StaticResource DangerTheme}" 
+                    Margin="0 5 0 5"
+                    Content="Danger Button"
                     Padding="5,10"></Button>
-            <Button Style="{StaticResource WarningTheme}" Content="Warning Button"
+            <Button Style="{StaticResource WarningTheme}" 
+                    Margin="0 5 0 5"
+                    Content="Warning Button"
+                    Padding="5,10"></Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="5 0 5 0">
+            <TextBlock Padding="10" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Outline Button"/>
+            <Button Style="{StaticResource DarkTheme.Outline}"
+                    Margin="0 5 0 5"
+                    Content="Dark Button"
+                    Padding="5,10"></Button>
+            <Button Style="{StaticResource LightTheme.Outline}" 
+                    Margin="0 5 0 5"
+                    Content="Light Button"
+                    Padding="5,10"></Button>
+            <Button Style="{StaticResource SuccessTheme.Outline}" 
+                    Margin="0 5 0 5"
+                    Content="Success Button"
+                    Padding="5,10"></Button>
+            <Button Style="{StaticResource InfoTheme.Outline}" 
+                    Margin="0 5 0 5"
+                    Content="Info Button"
+                    Padding="5,10"></Button>
+            <Button Style="{StaticResource DangerTheme.Outline}" 
+                    Margin="0 5 0 5"
+                    Content="Danger Button"
+                    Padding="5,10"></Button>
+            <Button Style="{StaticResource WarningTheme.Outline}" 
+                    Margin="0 5 0 5"
+                    Content="Warning Button"
                     Padding="5,10"></Button>
         </StackPanel>
     </Grid>
