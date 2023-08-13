@@ -3,6 +3,8 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="./Button_Flat_Style.xaml"/>
         <ResourceDictionary Source="./Button_Outline_Style.xaml"/>
+        <ResourceDictionary Source="./Button_Rounded_Style.xaml"/>
+        <ResourceDictionary Source="./Button_Rounded_Outline_Style.xaml"/>
     </ResourceDictionary.MergedDictionaries>
     
 </ResourceDictionary>
