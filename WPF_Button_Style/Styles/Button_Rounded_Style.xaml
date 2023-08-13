@@ -1,0 +1,389 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+
+    <!--[Dark Theme]-->
+    <SolidColorBrush x:Key="DarkTheme.Dark" Color="#3B3B3B"/>
+    <SolidColorBrush x:Key="DarkTheme.Light" Color="#9B9B9B"/>
+
+    <SolidColorBrush x:Key="Background.Highlight" Color="#3E3D3D"/>
+    <SolidColorBrush x:Key="Foreground.Highlight" Color="#686767 "/>
+
+    <Style x:Key="DarkTheme.Rounded" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource DarkTheme.Dark}"/>
+        <Setter Property="Foreground" Value="{StaticResource DarkTheme.Light}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource DarkTheme.Dark}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border x:Name="border"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            SnapsToDevicePixels="true"
+                            CornerRadius="15">
+                        <ContentPresenter x:Name="contentPresenter"
+                            RecognizesAccessKey="True"
+                            Margin="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Focusable="False">
+                        </ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" TargetName="border" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{StaticResource Background.Highlight}"/>
+                            <Setter Property="Foreground" Value="{StaticResource Foreground.Highlight}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource DarkTheme.Dark}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{StaticResource Background.Highlight}"/>
+                            <Setter Property="Foreground" Value="{StaticResource Foreground.Highlight}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource DarkTheme.Dark}"/>
+                            <Setter Property="Opacity" Value="0.7"/>
+                        </Trigger>
+                        <Trigger Property="ToggleButton.IsChecked" Value="true" >
+                            <Setter Property="Background" Value="{StaticResource Background.Highlight}" TargetName="border" />
+                            <Setter Property="BorderBrush" Value="{StaticResource Foreground.Highlight}" TargetName="border" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" Value="{StaticResource DarkTheme.Dark}"/>
+                            <Setter Property="Foreground" Value="{StaticResource DarkTheme.Light}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource DarkTheme.Dark}"/>
+                            <Setter Property="Opacity" Value="0.6"/>
+                            <Setter Property="Cursor" Value="Cross"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--[Dark Theme]-->
+
+
+    <!--[Light Theme]-->
+
+    <SolidColorBrush x:Key="LightTheme.Background" Color="#FDFEFE"/>
+    <SolidColorBrush x:Key="LightTheme.Foreground" Color="#808B96"/>
+
+    <SolidColorBrush x:Key="LightTheme.Background.Highlight" Color="#F0F3F4"/>
+    <SolidColorBrush x:Key="LightTheme.Foreground.Highlight" Color="#CACFD2"/>
+
+    <Style x:Key="LightTheme.Rounded" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource LightTheme.Background}"/>
+        <Setter Property="Foreground" Value="{StaticResource LightTheme.Foreground}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource LightTheme.Background}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border x:Name="border"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        SnapsToDevicePixels="true"
+                            CornerRadius="15">
+                        <ContentPresenter x:Name="contentPresenter"
+                            RecognizesAccessKey="True"
+                            Margin="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Focusable="False">
+                        </ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" TargetName="border" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{StaticResource LightTheme.Background.Highlight}"/>
+                            <Setter Property="Foreground" Value="{StaticResource LightTheme.Foreground.Highlight}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource LightTheme.Background.Highlight}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{StaticResource LightTheme.Background.Highlight}"/>
+                            <Setter Property="Foreground" Value="{StaticResource LightTheme.Foreground.Highlight}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource LightTheme.Background.Highlight}"/>
+                            <Setter Property="Opacity" Value="0.7"/>
+                        </Trigger>
+                        <Trigger Property="ToggleButton.IsChecked" Value="true" >
+                            <Setter Property="Background" Value="{StaticResource LightTheme.Background.Highlight}" TargetName="border" />
+                            <Setter Property="BorderBrush" Value="{StaticResource LightTheme.Foreground.Highlight}" TargetName="border" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" Value="{StaticResource LightTheme.Background}"/>
+                            <Setter Property="Foreground" Value="{StaticResource LightTheme.Foreground}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource LightTheme.Background}"/>
+                            <Setter Property="Opacity" Value="0.6"/>
+                            <Setter Property="Cursor" Value="Cross"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--[Light Theme]-->
+
+
+
+    <!--[Success Theme]-->
+    <SolidColorBrush x:Key="SuccessTheme.Background" Color="#48C9B0"/>
+    <SolidColorBrush x:Key="SuccessTheme.Foreground" Color="#E8F8F5"/>
+
+    <SolidColorBrush x:Key="SuccessTheme.Background.Highlight" Color="#76D7C4"/>
+    <SolidColorBrush x:Key="SuccessTheme.Foreground.Highlight" Color="#E8F8F5"/>
+
+    <Style x:Key="SuccessTheme.Rounded" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource SuccessTheme.Background}"/>
+        <Setter Property="Foreground" Value="{StaticResource SuccessTheme.Foreground}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource SuccessTheme.Background}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border x:Name="border"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        SnapsToDevicePixels="true"
+                            CornerRadius="15">
+                        <ContentPresenter x:Name="contentPresenter"
+                            RecognizesAccessKey="True"
+                            Margin="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Focusable="False">
+                        </ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" TargetName="border" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{StaticResource SuccessTheme.Background.Highlight}"/>
+                            <Setter Property="Foreground" Value="{StaticResource SuccessTheme.Foreground.Highlight}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource SuccessTheme.Background.Highlight}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{StaticResource SuccessTheme.Background.Highlight}"/>
+                            <Setter Property="Foreground" Value="{StaticResource SuccessTheme.Foreground.Highlight}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource SuccessTheme.Background.Highlight}"/>
+                            <Setter Property="Opacity" Value="0.7"/>
+                        </Trigger>
+                        <Trigger Property="ToggleButton.IsChecked" Value="true" >
+                            <Setter Property="Background" Value="{StaticResource SuccessTheme.Background.Highlight}" TargetName="border" />
+                            <Setter Property="BorderBrush" Value="{StaticResource SuccessTheme.Foreground.Highlight}" TargetName="border" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" Value="{StaticResource SuccessTheme.Background}"/>
+                            <Setter Property="Foreground" Value="{StaticResource SuccessTheme.Foreground}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource SuccessTheme.Background}"/>
+                            <Setter Property="Opacity" Value="0.6"/>
+                            <Setter Property="Cursor" Value="Cross"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--[Success Theme]-->
+
+
+    <!--[Info Theme]-->
+
+    <SolidColorBrush x:Key="InfoTheme.Background" Color="#5499C7"/>
+    <SolidColorBrush x:Key="InfoTheme.Foreground" Color="#D4E6F1"/>
+
+    <SolidColorBrush x:Key="InfoTheme.Background.Highlight" Color="#7FB3D5"/>
+    <SolidColorBrush x:Key="InfoTheme.Foreground.Highlight" Color="#EAF2F8"/>
+
+    <Style x:Key="InfoTheme.Rounded" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource InfoTheme.Background}"/>
+        <Setter Property="Foreground" Value="{StaticResource InfoTheme.Foreground}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource InfoTheme.Background}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border x:Name="border"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        SnapsToDevicePixels="true"
+                            CornerRadius="15">
+                        <ContentPresenter x:Name="contentPresenter"
+                            RecognizesAccessKey="True"
+                            Margin="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Focusable="False">
+                        </ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" TargetName="border" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{StaticResource InfoTheme.Background.Highlight}"/>
+                            <Setter Property="Foreground" Value="{StaticResource InfoTheme.Foreground.Highlight}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource InfoTheme.Background.Highlight}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{StaticResource InfoTheme.Background.Highlight}"/>
+                            <Setter Property="Foreground" Value="{StaticResource InfoTheme.Foreground.Highlight}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource InfoTheme.Background.Highlight}"/>
+                            <Setter Property="Opacity" Value="0.7"/>
+                        </Trigger>
+                        <Trigger Property="ToggleButton.IsChecked" Value="true" >
+                            <Setter Property="Background" Value="{StaticResource InfoTheme.Background.Highlight}" TargetName="border" />
+                            <Setter Property="BorderBrush" Value="{StaticResource InfoTheme.Foreground.Highlight}" TargetName="border" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" Value="{StaticResource InfoTheme.Background}"/>
+                            <Setter Property="Foreground" Value="{StaticResource InfoTheme.Foreground}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource InfoTheme.Background}"/>
+                            <Setter Property="Opacity" Value="0.6"/>
+                            <Setter Property="Cursor" Value="Cross"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--[Info Theme]-->
+
+
+    <!--[Warning Theme]-->
+
+    <SolidColorBrush x:Key="WarningTheme.Background" Color="#F7DC6F"/>
+    <SolidColorBrush x:Key="WarningTheme.Foreground" Color="#212F3D"/>
+
+    <SolidColorBrush x:Key="WarningTheme.Background.Highlight" Color="#F9E79F"/>
+    <SolidColorBrush x:Key="WarningTheme.Foreground.Highlight" Color="#566573"/>
+
+    <Style x:Key="WarningTheme.Rounded" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource WarningTheme.Background}"/>
+        <Setter Property="Foreground" Value="{StaticResource WarningTheme.Foreground}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource WarningTheme.Background}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border x:Name="border"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        SnapsToDevicePixels="true"
+                            CornerRadius="15">
+                        <ContentPresenter x:Name="contentPresenter"
+                            RecognizesAccessKey="True"
+                            Margin="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Focusable="False">
+                        </ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" TargetName="border" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{StaticResource WarningTheme.Background.Highlight}"/>
+                            <Setter Property="Foreground" Value="{StaticResource WarningTheme.Foreground.Highlight}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource WarningTheme.Background.Highlight}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{StaticResource WarningTheme.Background.Highlight}"/>
+                            <Setter Property="Foreground" Value="{StaticResource WarningTheme.Foreground.Highlight}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource WarningTheme.Background.Highlight}"/>
+                            <Setter Property="Opacity" Value="0.7"/>
+                        </Trigger>
+                        <Trigger Property="ToggleButton.IsChecked" Value="true" >
+                            <Setter Property="Background" Value="{StaticResource WarningTheme.Background.Highlight}" TargetName="border" />
+                            <Setter Property="BorderBrush" Value="{StaticResource WarningTheme.Foreground.Highlight}" TargetName="border" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" Value="{StaticResource WarningTheme.Background}"/>
+                            <Setter Property="Foreground" Value="{StaticResource WarningTheme.Foreground}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource WarningTheme.Background}"/>
+                            <Setter Property="Opacity" Value="0.6"/>
+                            <Setter Property="Cursor" Value="Cross"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--[Warning Theme]-->
+
+
+
+    <!--[Danger Theme]-->
+
+    <SolidColorBrush x:Key="DangerTheme.Background" Color="#E74C3C"/>
+    <SolidColorBrush x:Key="DangerTheme.Foreground" Color="#F5B7B1"/>
+
+    <SolidColorBrush x:Key="DangerTheme.Background.Highlight" Color="#F1948A"/>
+    <SolidColorBrush x:Key="DangerTheme.Foreground.Highlight" Color="#FADBD8"/>
+
+
+    <Style x:Key="DangerTheme.Rounded" TargetType="{x:Type Button}">
+        <Setter Property="Background" Value="{StaticResource DangerTheme.Background}"/>
+        <Setter Property="Foreground" Value="{StaticResource DangerTheme.Foreground}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource DangerTheme.Background}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border x:Name="border"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        SnapsToDevicePixels="true"
+                            CornerRadius="15">
+                        <ContentPresenter x:Name="contentPresenter"
+                            RecognizesAccessKey="True"
+                            Margin="{TemplateBinding Padding}"
+                            SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Focusable="False">
+                        </ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" TargetName="border" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{StaticResource DangerTheme.Background.Highlight}"/>
+                            <Setter Property="Foreground" Value="{StaticResource DangerTheme.Foreground.Highlight}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource DangerTheme.Background.Highlight}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{StaticResource DangerTheme.Background.Highlight}"/>
+                            <Setter Property="Foreground" Value="{StaticResource DangerTheme.Foreground.Highlight}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource DangerTheme.Background.Highlight}"/>
+                            <Setter Property="Opacity" Value="0.7"/>
+                        </Trigger>
+                        <Trigger Property="ToggleButton.IsChecked" Value="true" >
+                            <Setter Property="Background" Value="{StaticResource DangerTheme.Background.Highlight}" TargetName="border" />
+                            <Setter Property="BorderBrush" Value="{StaticResource DangerTheme.Foreground.Highlight}" TargetName="border" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" Value="{StaticResource DangerTheme.Background}"/>
+                            <Setter Property="Foreground" Value="{StaticResource DangerTheme.Foreground}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource DangerTheme.Background}"/>
+                            <Setter Property="Opacity" Value="0.6"/>
+
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--[Danger Theme]-->
+</ResourceDictionary>
