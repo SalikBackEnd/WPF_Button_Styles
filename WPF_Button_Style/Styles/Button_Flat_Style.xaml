@@ -55,6 +55,7 @@
                             <Setter Property="Foreground" Value="{StaticResource DarkTheme.Light}"/>
                             <Setter Property="BorderBrush" Value="{StaticResource DarkTheme.Dark}"/>
                             <Setter Property="Opacity" Value="0.6"/>
+                            <Setter Property="Cursor" Value="Cross"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -117,6 +118,7 @@
                             <Setter Property="Foreground" Value="{StaticResource LightTheme.Foreground}"/>
                             <Setter Property="BorderBrush" Value="{StaticResource LightTheme.Background}"/>
                             <Setter Property="Opacity" Value="0.6"/>
+                            <Setter Property="Cursor" Value="Cross"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -179,6 +181,7 @@
                             <Setter Property="Foreground" Value="{StaticResource SuccessTheme.Foreground}"/>
                             <Setter Property="BorderBrush" Value="{StaticResource SuccessTheme.Background}"/>
                             <Setter Property="Opacity" Value="0.6"/>
+                            <Setter Property="Cursor" Value="Cross"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -241,6 +244,7 @@
                             <Setter Property="Foreground" Value="{StaticResource InfoTheme.Foreground}"/>
                             <Setter Property="BorderBrush" Value="{StaticResource InfoTheme.Background}"/>
                             <Setter Property="Opacity" Value="0.6"/>
+                            <Setter Property="Cursor" Value="Cross"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -303,6 +307,7 @@
                             <Setter Property="Foreground" Value="{StaticResource WarningTheme.Foreground}"/>
                             <Setter Property="BorderBrush" Value="{StaticResource WarningTheme.Background}"/>
                             <Setter Property="Opacity" Value="0.6"/>
+                            <Setter Property="Cursor" Value="Cross"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -367,6 +372,7 @@
                             <Setter Property="Foreground" Value="{StaticResource DangerTheme.Foreground}"/>
                             <Setter Property="BorderBrush" Value="{StaticResource DangerTheme.Background}"/>
                             <Setter Property="Opacity" Value="0.6"/>
+                            
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
